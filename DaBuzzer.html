@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaBuzzzer</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .button-container {
+            text-align: center;
+        }
+        .buzzer-button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 100px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .buzzer-button:hover {
+            background-color: #cc0000;
+            transform: scale(1.05);
+        }
+        .buzzer-button:active {
+            background-color: #990000;
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="buzzer-button" onclick="playBuzzer()">BUZZER!</button>
+        <audio id="buzzerAudio" src="buzzer.mp3"></audio>
+    </div>
+
+    <script>
+        function playBuzzer() {
+            var audio = document.getElementById('buzzerAudio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
